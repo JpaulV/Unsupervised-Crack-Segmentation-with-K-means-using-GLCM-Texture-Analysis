@@ -1,0 +1,59 @@
+# Unsupervised-Crack-Segmentation-with-K-means-using-GLCM-Texture-Analysis
+This repository contains a Python code implementation for crack segmentation using a combination of texture analysis and K-means clustering. The code utilizes the scikit-image library for texture feature extraction and The purpose of this code is to automatically detect and segment cracks in images using an unsupervised approach.
+
+## Crack Segmentation using Texture Analysis and K-means Clustering
+
+This repository contains a Python code implementation for crack segmentation using a combination of texture analysis and K-means clustering. The code utilizes the scikit-image library for texture feature extraction and the scikit-learn library for K-means clustering. The purpose of this code is to automatically detect and segment cracks in images using an unsupervised approach.
+
+### Dataset
+
+The dataset used in this code consists of positive images containing cracks. The dataset is sourced from Kaggle and contains 2000 crack/positive images, each with a resolution of 227x227 pixels. The dataset has been preprocessed to prepare it for the crack segmentation process.
+
+### Overview
+
+The code is organized into several key steps:
+
+1. **Data Preparation:**
+   - Positive images containing cracks are loaded from a specified folder.
+   - The dataset is split into training, validation, and test sets.
+
+2. **Texture Analysis:**
+   - Texture properties (dissimilarity, correlation, and homogeneity) are calculated using gray-level co-occurrence matrix (GLCM) for each image.
+   - Texture properties are calculated for the training, validation, and test sets.
+
+3. **K-means Clustering:**
+   - Hyperparameter tuning is performed on the validation set to determine the optimal number of clusters for K-means.
+   - The K-means algorithm is trained using the optimal number of clusters and the combined training and validation data.
+   - Test images are segmented using the trained K-means model.
+
+4. **Segmentation Refinement:**
+   - Morphological closing is applied to fill small gaps in the segmented regions.
+
+5. **Contour Detection and Visualization:**
+   - Contours of the segmented regions are detected and drawn on the original grayscale image.
+   - Visualization of the original image, segmented regions, and contours is provided.
+
+### Getting Started
+
+To use the code, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Install the required libraries using `pip install -r requirements.txt`.
+3. Place your positive images (crack images) in the specified folder (update `positive_img_folder` in the code).
+4. Run the code to perform crack segmentation and visualize the results.
+
+### Dependencies
+
+The code requires the following libraries:
+
+- OpenCV (`cv2`)
+- NumPy
+- pandas
+- scikit-image (`skimage`)
+- scikit-learn (`sklearn`)
+- Matplotlib
+
+### Disclaimer
+
+Please note that the effectiveness of crack segmentation may vary based on the dataset and specific use case. This code serves as a starting point and can be further customized and optimized for your specific requirements.
+
