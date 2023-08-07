@@ -8,7 +8,7 @@ This repository contains a Python code implementation for crack segmentation usi
 ### Dataset
 
 The dataset used in this code consists of positive images containing cracks. The dataset is sourced from Kaggle and contains 2000 crack/positive images, each with a resolution of 227x227 pixels. The dataset has been preprocessed to prepare it for the crack segmentation process.
-
+https://www.kaggle.com/datasets/arunrk7/surface-crack-detection
 ### Overview
 
 The code is organized into several key steps:
