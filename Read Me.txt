@@ -1,5 +1,5 @@
 
-## Crack Segmentation using Texture Analysis and K-means Clustering
+##   Crack Segmentation using Texture Analysis and K-means Clustering
 
 This repository contains a Python code implementation for crack segmentation using a combination of texture analysis and K-means clustering. The code utilizes the scikit-image library for texture feature extraction and the scikit-learn library for K-means clustering. The purpose of this code is to automatically detect and segment cracks in images using an unsupervised approach.
 
